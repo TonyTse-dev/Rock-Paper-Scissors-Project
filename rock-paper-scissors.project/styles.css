@@ -1,0 +1,25 @@
+html, body {
+  font-family: 'Arial', sans-serif;
+  background-color: bisque;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.options_container{
+    text-align: center;
+}
+
+.result_container{
+    text-align: center;
+}
+
+.button_icon{
+    width: 100px;
+}
+
+button{
+    font-size: 25px;
+}
