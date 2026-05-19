@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors game</title>
-    <!-- REMOVED the leading slash / -->
-    <link rel="stylesheet" href="rock-paper-scissors.project/styles.css">
+    <!-- Relative path: no leading slash, and matched to 'style.css' (lowercase, no extra 's') -->
+    <link rel="stylesheet" href="rock-paper-scissors.project/style.css">
 </head>
 <body>
+
     <h1 class="title">Rock paper scissors game</h1>
+    
     <div class="options_container">
-        <!-- REMOVED leading slashes from all image sources -->
-        <button class="button" id="rock_btn" value="rock" onclick="program()"><img src="rock-paper-scissors.project/rock.png" class="button_icon"><br>Rock</button>
-        <button class="button" id="paper_btn" value="paper" onclick="program()"><img src="rock-paper-scissors.project/paper.png" class="button_icon"><br>Paper</button>
-        <button class="button" id="scissors_btn" value="scissors" onclick="program()"><img src="rock-paper-scissors.project/scissors.png" class="button_icon"><br>Scissors</button>
+        <!-- Kept relative image paths and gave each button a unique ID -->
+        <button class="button" id="rock_btn" value="rock" onclick="program()">
+            <img src="rock-paper-scissors.project/rock.png" class="button_icon"><br>Rock
+        </button>
+        <button class="button" id="paper_btn" value="paper" onclick="program()">
+            <img src="rock-paper-scissors.project/paper.png" class="button_icon"><br>Paper
+        </button>
+        <button class="button" id="scissors_btn" value="scissors" onclick="program()">
+            <img src="rock-paper-scissors.project/scissors.png" class="button_icon"><br>Scissors
+        </button>
     </div>
 
     <div class="result_container">
@@ -23,30 +31,41 @@
     </div>
 
     <script>
-        function program(){
+        function program() {
+            // Identifies which button was clicked using its value attribute
             let choice = document.activeElement.value;
             let computer_result;
             
-            function math(){
-                const math = Math.random() * 10;
+            function math() {
+                const mathResult = Math.random() * 10;
                 computer_result = -1;
-                if (math <= 3.333333333){
+                
+                if (mathResult <= 3.333333333) {
                     computer_result = "rock";
-                } else if (math > 3.33333333 && math <= 6.6666666666){
+                } else if (mathResult > 3.33333333 && mathResult <= 6.6666666666) {
                     computer_result = "paper";
                 } else {
                     computer_result = "scissors";
                 }
-                console.log(math);
+                console.log(mathResult);
             }
             math();
             
-            function run_result(){
+            function run_result() {
+                // Check game rules and update the UI text results
                 if (choice === computer_result) {
                     document.getElementById("result").textContent = "This is a tie 🟨";
-                } else if ((choice === "paper" && computer_result === "rock") || (choice === "rock" && computer_result === "scissors") || (choice === "scissors" && computer_result === "paper")){
+                } else if (
+                    (choice === "paper" && computer_result === "rock") || 
+                    (choice === "rock" && computer_result === "scissors") || 
+                    (choice === "scissors" && computer_result === "paper")
+                ) {
                     document.getElementById("result").textContent = "You win 🟩";
-                } else if ((choice === "rock" && computer_result === "paper") || (choice === "scissors" && computer_result === "rock") || (choice === "paper" && computer_result === "scissors") ){
+                } else if (
+                    (choice === "rock" && computer_result === "paper") || 
+                    (choice === "scissors" && computer_result === "rock") || 
+                    (choice === "paper" && computer_result === "scissors")
+                ) {
                     document.getElementById("result").textContent = "You lost 🟥";
                 }
 
