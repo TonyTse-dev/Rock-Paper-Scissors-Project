@@ -47,6 +47,4 @@ To run this project locally on your machine:
 ## 🐛 Found a bug?
 
 If you spot any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request!
----
-*Created as part of the Foundation-and-practice curriculum.*
 
