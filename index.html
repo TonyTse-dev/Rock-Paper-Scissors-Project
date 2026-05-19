@@ -4,62 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors game</title>
-    <link rel="stylesheet" href="/rock-paper-scissors.project/styles.css">
+    <!-- REMOVED the leading slash / -->
+    <link rel="stylesheet" href="rock-paper-scissors.project/styles.css">
 </head>
 <body>
     <h1 class="title">Rock paper scissors game</h1>
     <div class="options_container">
-        <button class="button" id="button" value="rock" onclick="program()"><img src="/rock-paper-scissors.project/rock.png" class="button_icon"><br>Rock</button>
-        <button class="button" id="button" value="paper" onclick="program()"><img src="/rock-paper-scissors.project/paper.png" class="button_icon"><br>Paper</button>
-        <button class="button" id="button" value="scissors" onclick="program()"><img src="/rock-paper-scissors.project/scissors.png" class="button_icon"><br>Scissors</button>
-
+        <!-- REMOVED leading slashes from all image sources -->
+        <button class="button" id="rock_btn" value="rock" onclick="program()"><img src="rock-paper-scissors.project/rock.png" class="button_icon"><br>Rock</button>
+        <button class="button" id="paper_btn" value="paper" onclick="program()"><img src="rock-paper-scissors.project/paper.png" class="button_icon"><br>Paper</button>
+        <button class="button" id="scissors_btn" value="scissors" onclick="program()"><img src="rock-paper-scissors.project/scissors.png" class="button_icon"><br>Scissors</button>
     </div>
 
     <div class="result_container">
         <h1 id="result"></h1>
         <h1 id="computer_choice"></h1>
         <h1 id="player_choice"></h1>
-
     </div>
 
     <script>
         function program(){
             let choice = document.activeElement.value;
-            let computer_result
+            let computer_result;
+            
             function math(){
-                const math = Math.random() * 10
-                 computer_result = -1
+                const math = Math.random() * 10;
+                computer_result = -1;
                 if (math <= 3.333333333){
                     computer_result = "rock";
-                }else if (math >3.33333333 && math <= 6.6666666666){
+                } else if (math > 3.33333333 && math <= 6.6666666666){
                     computer_result = "paper";
-                }else{
+                } else {
                     computer_result = "scissors";
                 }
-                console.log(math)
+                console.log(math);
             }
-            math()
+            math();
             
             function run_result(){
-
                 if (choice === computer_result) {
                     document.getElementById("result").textContent = "This is a tie 🟨";
-                }else if ((choice === "paper" && computer_result === "rock") || (choice === "rock" && computer_result === "scissors") || (choice === "scissors" && computer_result === "paper")){
+                } else if ((choice === "paper" && computer_result === "rock") || (choice === "rock" && computer_result === "scissors") || (choice === "scissors" && computer_result === "paper")){
                     document.getElementById("result").textContent = "You win 🟩";
-                }
-                else if ((choice === "rock" && computer_result === "paper") || (choice === "scissors" && computer_result === "rock") || (choice === "paper" && computer_result === "scissors") ){
+                } else if ((choice === "rock" && computer_result === "paper") || (choice === "scissors" && computer_result === "rock") || (choice === "paper" && computer_result === "scissors") ){
                     document.getElementById("result").textContent = "You lost 🟥";
                 }
 
                 document.getElementById("computer_choice").textContent = "Computer choice: " + computer_result;
                 document.getElementById("player_choice").textContent = "Player choice: " + choice;
-
             }
 
-            run_result()
+            run_result();
         }
-
-
     </script>
-    </body>
+</body>
 </html>
