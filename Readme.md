@@ -20,12 +20,13 @@ Play the game live here: https://tonytse-dev.github.io/Rock-Paper-Scissors-Proje
 ## 📁 Repository Structure
 ```text
 your-repository/
+├── README.md         # Project documentation
 ├── index.html        # Main game interface and layout
 ├── style.css         # Visual design and responsive layouts
-├── script.js        # Core game mechanics and event handlers
-└── Foundation-and-practice/
-    └── rock-paper-scissors.project/
-        └── README.md # Project documentation
+├── script.js         # Core game mechanics
+├── rock.png          # Game image asset
+├── paper.png         # Game image asset
+└── scissors.png      # Game image asset
 ```
 
 ## 🎮 How to Play
@@ -46,3 +47,4 @@ To run this project locally on your machine:
 
 ---
 *Created as part of the Foundation-and-practice curriculum.*
+*If there are any bugs, please contact me or help me to fix it 😘. *
