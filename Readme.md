@@ -3,7 +3,7 @@
 A clean, responsive, and interactive classic Rock-Paper-Scissors game built using native web technologies. This project was developed as part of foundational web development practice.
 
 ## 🚀 Live Demo
-Play the game live here: https://tonytse-dev.github.io/Foundation-and-practice/
+Play the game live here: https://tonytse-dev.github.io/Rock-Paper-Scissors-Project/
 *(Note: Replace the URL above with your actual GitHub Pages link)*
 
 ## ✨ Features
