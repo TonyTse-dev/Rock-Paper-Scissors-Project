@@ -44,7 +44,10 @@ To run this project locally on your machine:
 1. Clone this repository: `git clone https://github.com`
 2. Navigate to the project directory.
 3. Open `index.html` in any web browser.
+---
+## 🐛 Found a bug?
 
+If you spot any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request!
 ---
 *Created as part of the Foundation-and-practice curriculum.*
-*If there are any bugs, please contact me or help me to fix it 😘. *
+
