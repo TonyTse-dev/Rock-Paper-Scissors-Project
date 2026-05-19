@@ -1,11 +1,21 @@
 html, body {
   font-family: 'Arial', sans-serif;
-  background-color: bisque;
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2{
+    color: white;
 }
 
 .title{
     text-align: center;
     font-weight: bold;
+}
+
+.information_title{
+    color: black;
 }
 
 .options_container{
@@ -22,4 +32,12 @@ html, body {
 
 button{
     font-size: 25px;
+}
+
+.information{
+    margin-left: auto;
+    padding-left: 10px;
+    background-color: #F8DD5C;
+    width: 35%;
+    height: 10%;
 }

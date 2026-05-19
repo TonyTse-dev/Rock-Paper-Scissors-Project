@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <div class="information">
+        <h2 class="information_title">Score</h2>
+        <p id="Computer">Computer: <span id="computerWinCount">0</span></p>
+        <p id="You">You: <span id="playerWinCount">0</span></p>
+    </div>
+    
     <h1 class="title">Rock paper scissors game</h1>
     
     <div class="options_container">
@@ -54,19 +59,25 @@
             function run_result() {
                 // Check game rules and update the UI text results
                 if (choice === computer_result) {
-                    document.getElementById("result").textContent = "This is a tie 🟨";
+                    document.getElementById("result").textContent = "DRAW";
+                    document.getElementById("result").style.backgroundColor = "black";
+
                 } else if (
                     (choice === "paper" && computer_result === "rock") || 
                     (choice === "rock" && computer_result === "scissors") || 
                     (choice === "scissors" && computer_result === "paper")
                 ) {
-                    document.getElementById("result").textContent = "You win 🟩";
+                    document.getElementById("result").textContent = "YOU WIN";
+                    document.getElementById("result").style.backgroundColor = "green";
+                    document.getElementById("playerWinCount").textContent = parseInt(document.getElementById("playerWinCount").textContent) + 1;
                 } else if (
                     (choice === "rock" && computer_result === "paper") || 
                     (choice === "scissors" && computer_result === "rock") || 
                     (choice === "paper" && computer_result === "scissors")
                 ) {
-                    document.getElementById("result").textContent = "You lost 🟥";
+                    document.getElementById("result").textContent = "YOU LOST";
+                    document.getElementById("result").style.backgroundColor = "red";
+                    document.getElementById("computerWinCount").textContent = parseInt(document.getElementById("computerWinCount").textContent) + 1;
                 }
 
                 document.getElementById("computer_choice").textContent = "Computer choice: " + computer_result;
