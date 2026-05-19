@@ -3,7 +3,7 @@
 A clean, responsive, and interactive classic Rock-Paper-Scissors game built using native web technologies. This project was developed as part of foundational web development practice.
 
 ## 🚀 Live Demo
-Play the game live here: https://tonytse-dev.github.io/Foundation-and-practice/
+Play the game live here: https://tonytse-dev.github.io/Rock-Paper-Scissors-Project/
 *(Note: Replace the URL above with your actual GitHub Pages link)*
 
 ## ✨ Features
@@ -20,12 +20,13 @@ Play the game live here: https://tonytse-dev.github.io/Foundation-and-practice/
 ## 📁 Repository Structure
 ```text
 your-repository/
+├── README.md         # Project documentation
 ├── index.html        # Main game interface and layout
 ├── style.css         # Visual design and responsive layouts
-├── script.js        # Core game mechanics and event handlers
-└── Foundation-and-practice/
-    └── rock-paper-scissors.project/
-        └── README.md # Project documentation
+├── script.js         # Core game mechanics
+├── rock.png          # Game image asset
+├── paper.png         # Game image asset
+└── scissors.png      # Game image asset
 ```
 
 ## 🎮 How to Play
@@ -43,6 +44,7 @@ To run this project locally on your machine:
 1. Clone this repository: `git clone https://github.com`
 2. Navigate to the project directory.
 3. Open `index.html` in any web browser.
+## 🐛 Found a bug?
 
----
-*Created as part of the Foundation-and-practice curriculum.*
+If you spot any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request!
+
